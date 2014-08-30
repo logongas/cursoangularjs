@@ -1,4 +1,4 @@
-package es.cursohibernate.spring.controller;
+package es.cursoangularjs.spring.controller;
 
 import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;

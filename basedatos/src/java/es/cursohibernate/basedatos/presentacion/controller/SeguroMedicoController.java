@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-public class UsuarioController {
+public class SeguroMedicoController {
     
     @Autowired
     private JsonTransformer jsonTransformer;
@@ -22,7 +22,7 @@ public class UsuarioController {
     
     @RequestMapping(value = {"/SeguroMedico"})
     public void prueba(HttpServletRequest httpRequest, HttpServletResponse httpServletResponse) throws Exception {
-        SeguroMedico seguroMedico=seguroMedicoDAO.get(6);
+        SeguroMedico seguroMedico=seguroMedicoDAO.get(1);
         String jsonSeguroMedico=jsonTransformer.toJson(seguroMedico);
         
         httpServletResponse.getWriter().println(jsonSeguroMedico);

@@ -16,7 +16,6 @@ public class UsuarioController {
     @Autowired
     private JsonTransformer jsonTransformer;
     
-    
     @RequestMapping(value = {"/Usuario"})
     public void prueba(HttpServletRequest httpRequest, HttpServletResponse httpServletResponse) throws IOException {
         Usuario usuario=new Usuario("Alberto Tortosa","alberto_tortosa@gmail.com",91);

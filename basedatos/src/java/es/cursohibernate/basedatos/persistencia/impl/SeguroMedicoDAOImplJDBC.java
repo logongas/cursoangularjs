@@ -14,7 +14,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-public class SeguroMedicoImplJDBC implements SeguroMedicoDAO {
+public class SeguroMedicoDAOImplJDBC implements SeguroMedicoDAO {
 
     @Override
     public void insert(SeguroMedico seguroMedico) throws BussinessException {

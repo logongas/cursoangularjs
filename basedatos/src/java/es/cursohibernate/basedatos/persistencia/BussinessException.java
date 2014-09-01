@@ -1,4 +1,4 @@
-package es.cursohibernate.basedatos.dominio;
+package es.cursohibernate.basedatos.persistencia;
 
 import java.util.ArrayList;
 import java.util.List;

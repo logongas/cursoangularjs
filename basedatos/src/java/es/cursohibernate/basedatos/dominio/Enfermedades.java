@@ -1,5 +1,5 @@
 
-package es.cursohibernate.basedatos.persistencia;
+package es.cursohibernate.basedatos.dominio;
 
 
 public class Enfermedades {

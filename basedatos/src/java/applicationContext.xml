@@ -10,6 +10,6 @@
     <context:annotation-config/>
  
     <bean class="es.cursohibernate.basedatos.presentacion.json.impl.JsonTransformerImplJackson" />
-    <bean class="es.cursohibernate.basedatos.dominio.impl.SeguroMedicoImplJDBC" />
+    <bean class="es.cursohibernate.basedatos.persistencia.impl.SeguroMedicoImplJDBC" />
     
 </beans>

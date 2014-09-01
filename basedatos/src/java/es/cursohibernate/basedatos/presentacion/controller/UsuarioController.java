@@ -1,8 +1,8 @@
 package es.cursohibernate.basedatos.presentacion.controller;
 
 
-import es.cursohibernate.basedatos.dominio.SeguroMedicoDAO;
-import es.cursohibernate.basedatos.persistencia.SeguroMedico;
+import es.cursohibernate.basedatos.persistencia.SeguroMedicoDAO;
+import es.cursohibernate.basedatos.dominio.SeguroMedico;
 import es.cursohibernate.basedatos.presentacion.json.JsonTransformer;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

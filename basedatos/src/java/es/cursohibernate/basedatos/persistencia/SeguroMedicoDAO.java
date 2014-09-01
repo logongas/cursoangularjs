@@ -1,6 +1,6 @@
-package es.cursohibernate.basedatos.dominio;
+package es.cursohibernate.basedatos.persistencia;
 
-import es.cursohibernate.basedatos.persistencia.SeguroMedico;
+import es.cursohibernate.basedatos.dominio.SeguroMedico;
 import java.util.List;
 
 public interface SeguroMedicoDAO {

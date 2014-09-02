@@ -10,5 +10,5 @@
 ">
 
     <context:component-scan base-package="es.cursohibernate.basedatos.presentacion.controller" />
-    
+
 </beans>

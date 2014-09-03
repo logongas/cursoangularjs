@@ -1,0 +1,1 @@
+<div>&copy; Seguros medicos S.A.</div>

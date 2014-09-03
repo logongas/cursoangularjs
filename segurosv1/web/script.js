@@ -16,7 +16,7 @@ function RemoteResource($http, $q, baseUrl) {
 
         return promise;
 
-    }
+    };
     this.list = function() {
         var defered = $q.defer();
         var promise = defered.promise;
@@ -32,18 +32,18 @@ function RemoteResource($http, $q, baseUrl) {
 
 
         return promise;
-    }
-}
+    };
+};
 
 function RemoteResourceProvider() {
     var _baseUrl;
     this.setBaseUrl = function(baseUrl) {
         _baseUrl = baseUrl;
-    }
+    };
     this.$get = ['$http', '$q', function($http, $q) {
             return new RemoteResource($http, $q, _baseUrl);
         }];
-}
+};
 
 app.provider("remoteResource", RemoteResourceProvider);
 
@@ -88,7 +88,7 @@ app.filter("filteri18n", ["$filter", function($filter) {
         function filteri18n(array, expression) {
             //Lo único que hace es llamar al filter original pero pasado
             //la nueva función de comparator
-            return filterFn(array, expression, comparator)
+            return filterFn(array, expression, comparator);
         }
 
         return filteri18n;
@@ -149,7 +149,7 @@ app.controller("DetalleSeguroController", ['$scope', 'seguro', function($scope, 
 
         $scope.filtro = {
             ape1: ""
-        }
+        };
 
         $scope.sexos = [{
                 codSexo: "H",
@@ -182,7 +182,7 @@ app.controller("DetalleSeguroController", ['$scope', 'seguro', function($scope, 
                 nombreAlergia: ""
             },
             fechaCreacion: new Date()
-        }
+        };
 
         $scope.seguro = seguro;
 
@@ -193,7 +193,7 @@ app.controller("DetalleSeguroController", ['$scope', 'seguro', function($scope, 
             } else {
                 alert("Hay datos inválidos");
             }
-        }
+        };
 
     }]);
 

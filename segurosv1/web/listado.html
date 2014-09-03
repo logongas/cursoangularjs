@@ -1,0 +1,38 @@
+
+Filtrar por apellido:<input ng-model="filtro.ape1" >
+
+<a href="#/seguro/new">Nuevo Seguro Medico</a>
+
+<table>
+  <thead>
+    <tr>
+      <th>NIF</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Sexo</th>
+      <th>Accion</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="3">El Nº de seguros medicos es:</td>
+      <td ng-bind="seguros.length"></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr ng-repeat="seguro in seguros| filteri18n:{ape1:filtro.ape1}" ng-style="{color:($odd?'red':'green')}">
+      <td><a ng-href="#/seguro/edit/{{seguro.idSeguro}}">{{seguro.nif}}</a></td>
+      <td>{{seguro.nombre}}</td>
+      <td>{{seguro.ape1}}</td>
+      <td ng-switch on="seguro.sexo">
+        <span ng-switch-when="H">Hombre</span>
+        <span ng-switch-when="M">Mujer</span>
+        <span ng-switch-when=""></span>
+        <span ng-switch-default>Desconocido</span>
+      </td>
+      <td>
+          <button ng-click="borrar(seguro.idSeguro)">Borrar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

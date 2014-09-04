@@ -4,6 +4,7 @@ import es.cursohibernate.seguros.persistencia.BussinessException;
 import es.cursohibernate.seguros.persistencia.SeguroMedicoDAO;
 import es.cursohibernate.seguros.dominio.SeguroMedico;
 import es.cursohibernate.seguros.dominio.Sexo;
+import es.cursohibernate.seguros.persistencia.BussinessMessage;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,6 +20,11 @@ public class SeguroMedicoDAOImplJDBC implements SeguroMedicoDAO {
     @Override
     public void insert(SeguroMedico seguroMedico) throws BussinessException {
 
+        if ("11111111A".equals(seguroMedico.getNif())) {
+            throw new BussinessException(new BussinessMessage("nif","La letra no es válida"));
+        }
+        
+        
         Connection connection = null;
 
         try {
@@ -136,7 +142,11 @@ public class SeguroMedicoDAOImplJDBC implements SeguroMedicoDAO {
 
     @Override
     public void delete(int idSeguroMedico) throws BussinessException {
-
+        
+        if (idSeguroMedico==1) {
+            throw new BussinessException(new BussinessMessage(null,"No es posible borrar el seguro médico"));
+        }
+        
         Connection connection = null;
 
         try {

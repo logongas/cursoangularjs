@@ -1,7 +1,7 @@
 
 Filtrar por apellido:<input ng-model="filtro.ape1" >
-
-<a href="#/seguro/new">Nuevo Seguro Medico</a>
+<br>
+ <a href="#/seguro/new">Nuevo Seguro Medico</a>
 
 <table>
   <thead>
@@ -10,7 +10,7 @@ Filtrar por apellido:<input ng-model="filtro.ape1" >
       <th>Nombre</th>
       <th>Apellido</th>
       <th>Sexo</th>
-      <th>Accion</th>
+       <th>Accion</th>
     </tr>
   </thead>
   <tfoot>
@@ -31,8 +31,16 @@ Filtrar por apellido:<input ng-model="filtro.ape1" >
         <span ng-switch-default>Desconocido</span>
       </td>
       <td>
-          <button ng-click="borrar(seguro.idSeguro)">Borrar</button>
+           <button ng-click="borrar(seguro.idSeguro)">Borrar</button>
       </td>
     </tr>
   </tbody>
 </table>
+
+<div ng-show="bussinessMessages.length > 0">
+    <div>Se han producido los siguientes errores</div>
+    <ul>
+        <li ng-repeat="bussinessMessage in bussinessMessages"><strong ng-hide="businessMessage.fieldName == null">{{bussinessMessage.fieldName}}:</strong>{{bussinessMessage.message}}.</li>
+    </ul>
+    <button ng-click="bussinessMessages = []" >Quitar mensajes</button>
+</div>

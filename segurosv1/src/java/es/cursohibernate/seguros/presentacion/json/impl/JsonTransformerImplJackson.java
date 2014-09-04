@@ -23,7 +23,8 @@ public class JsonTransformerImplJackson implements JsonTransformer {
     public Object fromJson(String json, Class clazz) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
-
+            //objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+                        
             return objectMapper.readValue(json, clazz);
         } catch (IOException ex) {
             throw new RuntimeException(ex);

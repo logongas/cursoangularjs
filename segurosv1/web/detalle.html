@@ -46,3 +46,11 @@
 </form>
 
 <a href="#/seguro/listado">Volver</a>
+
+<div ng-show="bussinessMessages.length > 0">
+    <div>Se han producido los siguientes errores</div>
+    <ul>
+        <li ng-repeat="bussinessMessage in bussinessMessages"><strong ng-hide="businessMessage.fieldName == null">{{bussinessMessage.fieldName}}:</strong>{{bussinessMessage.message}}.</li>
+    </ul>
+    <button ng-click="bussinessMessages = []" >Quitar mensajes</button>
+</div>
